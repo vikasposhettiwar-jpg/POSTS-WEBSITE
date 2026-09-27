@@ -1,0 +1,13 @@
+    {% extends 'base.html' %}
+
+    {% block content %}
+    <h1>Hi,{{request.user.username}} welcome to my website!</h1>
+    
+    {% for i in nums %}
+        <p>{{ i }}</p>
+    {% endfor %}
+
+    <a class="btn btn-danger" href="{% url 'logout' %}">Logout</a>
+
+    {% endblock content %}
+
